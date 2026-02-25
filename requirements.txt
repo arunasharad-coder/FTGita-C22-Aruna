@@ -1,2 +1,4 @@
-langchain-openai
 streamlit
+openai
+langchain-openai
+langchain-core
