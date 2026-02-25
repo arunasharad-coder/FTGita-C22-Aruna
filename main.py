@@ -53,7 +53,7 @@ def load_models():
     # Base model for comparison
     base = ChatOpenAI(model="gpt-4.1") 
     # Your specific fine-tuned model ID
-    ft = ChatOpenAI(model="ft:gpt-4.1-2025-04-14:personal::DCvHUpdR") 
+    ft = ChatOpenAI(model="ft:gpt-4.1-2025-04-14:personal::DDG5GqQU") 
     return base, ft
 
 base_model, ft_model = load_models()
