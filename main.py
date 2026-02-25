@@ -1,5 +1,6 @@
 import streamlit as st
 from langchain_openai import ChatOpenAI
+from langchain_core.messages import SystemMessage, HumanMessage
 import os
 
 # --- 1. PAGE CONFIGURATION ---
@@ -62,10 +63,20 @@ if st.button("Summarize"):
     if topic:
         with st.spinner("Meditating on the verses..."):
             try:
-                # Generate responses
-                prompt = f"Provide a spiritual summary and key takeaway for: {topic}"
-                base_response = base_model.invoke(prompt)
-                ft_response = ft_model.invoke(prompt)
+                # This SystemMessage acts as the "Instruction" to the AI
+                messages = [
+                    SystemMessage(content=(
+                        "You are a specialized assistant for the Bhagavad Gita. "
+                        "When a user mentions a chapter or verse, always assume they "
+                        "are referring to the Bhagavad Gita. Provide a spiritual summary "
+                        "and key takeaways in a clear, insightful manner."
+                    )),
+                    HumanMessage(content=f"Explain {topic}")
+                ]
+
+                # Generate responses using the message list
+                base_response = base_model.invoke(messages)
+                ft_response = ft_model.invoke(messages)
                 
                 # Create two columns for comparison
                 col1, col2 = st.columns(2)
