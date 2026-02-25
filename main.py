@@ -50,9 +50,9 @@ st.info("💡 **Try:** 'Explain the summary of Chapter 2'", icon="💡")
 @st.cache_resource
 def load_models():
     # Base model for comparison
-    base = ChatOpenAI(model="gpt-4o") 
+    base = ChatOpenAI(model="gpt-4.1") 
     # Your specific fine-tuned model ID
-    ft = ChatOpenAI(model="ft:gpt-4o-2024-08-06:personal::DCvHUpdR") 
+    ft = ChatOpenAI(model="ft:gpt-4.1-2025-04-14:personal::DCvHUpdR") 
     return base, ft
 
 base_model, ft_model = load_models()
