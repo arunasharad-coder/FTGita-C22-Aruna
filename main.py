@@ -39,12 +39,12 @@ st.markdown("""
 # --- 4. HEADER SECTION ---
 st.title("📖 GitaSummary-GPT")
 st.markdown("📋 **Summary:** Get a concise breakdown of any verse or chapter.") 
-st.markdown("❤️ Powered by **Aruna-GPT** (Fine-tuned GPT-4o).")
+st.markdown("❤️ Powered by **Aruna-GPT** (Fine-tuned GPT-4.1).")
 
 # --- 5. INPUT SECTION ---
 topic = st.text_input("Enter the Chapter or Verse:", placeholder="e.g., Chapter 2, Verse 47")
 
-st.info("💡 **Try:** 'Explain the summary of Chapter 2'", icon="💡")
+st.info("**Try:** 'Explain the summary of Chapter 2'", icon="💡")
 
 # --- 6. MODEL INITIALIZATION (CACHED) ---
 @st.cache_resource
