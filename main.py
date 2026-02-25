@@ -71,7 +71,7 @@ if st.button("Summarize"):
                 col1, col2 = st.columns(2)
                 
                 with col1:
-                    st.subheader("Standard GPT-4o 🔗")
+                    st.subheader("Standard GPT-4.1 🔗")
                     st.markdown(f'<div class="output-text">{base_response.content}</div>', unsafe_allow_html=True)
                 
                 with col2:
