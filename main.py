@@ -39,7 +39,7 @@ st.markdown("""
 
 # --- 4. HEADER SECTION ---
 st.title("📖 GitaSummary-GPT")
-st.markdown("📋 **Summary:** Get a concise breakdown of any verse or chapter.") 
+st.markdown("📋 **Summary:** Get a summary of any chapter.") 
 st.markdown("❤️ Powered by **Aruna-GPT** (Fine-tuned GPT-4.1).")
 
 # --- 5. INPUT SECTION ---
